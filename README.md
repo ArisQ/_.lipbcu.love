@@ -1,6 +1,6 @@
 # lipbcu.love网关
 
-lipbcu.love域名下的网站的网关，包括一下功能：
+lipbcu.love域名下的网站的网关，包括以下功能：
 * 采用nginx托管一些静态网站
 * 采用certbot自动获取通配符证书
 * 反向代理其他服务
