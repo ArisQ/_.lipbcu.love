@@ -17,7 +17,8 @@ lipbcu.love域名下的网站的网关，包括以下功能：
 ## 部署
 
 * 安装docker & docker-compose & 配置镜像加速
-* 配置cloudflare token用于certbot获取证书
+* 配置cloudflare token用于certbot获取证书，写入certbot/cloudflare.ini
+    * `dns_cloudflare_api_token = mytoken`
 * init-cert.sh
 * docker-compose up -d
 

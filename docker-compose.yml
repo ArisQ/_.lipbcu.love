@@ -13,6 +13,9 @@ services:
       - ./certbot/var/lib/letsencrypt:/var/lib/letsencrypt
     # 包含backgroud job，如何解决
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+    networks:
+      - default
+      - lipbcu-love-network
   certbot:
     image: certbot/dns-cloudflare
     volumes:
@@ -21,4 +24,7 @@ services:
       - ./certbot/var/log/letsencrypt:/var/log/letsencrypt
       - ./certbot/cloudflare.ini:/secrets/cloudflare.ini
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+networks:
+  lipbcu-love-network:
+    external: true
 
