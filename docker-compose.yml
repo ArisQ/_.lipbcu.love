@@ -24,6 +24,9 @@ services:
       - ./certbot/var/log/letsencrypt:/var/log/letsencrypt
       - ./certbot/cloudflare.ini:/secrets/cloudflare.ini
     entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+  api:
+    image: ccr.ccs.tencentyun.com/lipbcu.love/api-demo:main
+    entrypoint: /data/app/api.lipbcu.love/api-bin
 # networks:
 #   lipbcu-love-network:
 #     external: true
