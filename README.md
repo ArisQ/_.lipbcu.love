@@ -9,7 +9,7 @@ lipbcu.love域名下的网站的网关，包括以下功能：
 
 | 目录 | 说明 |
 |------|------|
-| certbot | certbot相关文件，除包含cloudflare的配置，其余问卷有certbot生成，并映射到nginx |
+| certbot | certbot相关文件，除包含cloudflare的配置，其余文件由certbot生成，并映射到nginx |
 | conf.d  | nginx站点配置文件 |
 | sites   | 托管的静态网站，每个网站一个文件夹 |
 
