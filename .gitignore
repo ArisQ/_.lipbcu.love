@@ -4,3 +4,7 @@ certbot/
 !certbot/cloudflare.example.ini
 *~
 
+/sites/www/
+
+*-local
+
